@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        img{
+            max-width: 100%;
+        }
+        .thumb{
+            /* background-color: orangered; */
+            margin-right: 10px;
+            max-width: 400px;
+            width: calc((100% - 10px)/2);
+        }
+    </style>
+</head>
+<body>
+    <img src="./src/images/chrome-md.jpeg" alt="chrome" 
+        srcset="./src/images/chrome-small.png 1x, ./src/images/icon.png 2x">
+    <picture>
+        <source media="(min-width: 650px)" srcset="./src/images/icon.png">
+        <img src="./src/images/chrome-small.png">
+    </picture>
+    <picture>
+        <source srcset="./src/images/icon.webp" type="images/webp"/>
+        <img src="src/images/icon.png" />
+    </picture>
+    <img class="thumb" src="./src/images/icon.png" alt="" srcset="">
+    <img  src="./src/images/pwa-google.png" alt="">
+    <script src="src/js/app.js"></script>
+</body>
+</html>
